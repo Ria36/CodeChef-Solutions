@@ -12,15 +12,22 @@ class Codechef
 		// your code goes here
 		Scanner s = new Scanner(System.in);
 		int t = s.nextInt();
+		while(t--!=0){
 		int a = s.nextInt();
 		int b = s.nextInt();
 		int c = s.nextInt();
-		while(t-->0){
 		    for(int i=2;i<100;i++){
-		        if((a%i!=0) && (b%i!=0) && (c%i!=0))
-		        System.out.println(i);
-		        break;
-		    }
-		}
+		        if(a%i!=0) {
+		            if(b%i!=0) {
+		                if(c%i!=0){
+            		        System.out.println(i);
+            		        i=100;
+            		        break;
+		                }
+		            }
+		        }
+	        }
+        }
 	}
+	
 }
